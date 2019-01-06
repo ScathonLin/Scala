@@ -1,0 +1,12 @@
+.settings/
+bin/
+<<<<<<< HEAD
+classes/
+.idea/
+out/
+=======
+.idea/
+out/
+classes/
+>>>>>>> ..
+*.iml
