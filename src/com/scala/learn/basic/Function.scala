@@ -2,10 +2,13 @@ package com.scala.learn.basic
 
 import java.text.MessageFormat
 
+import org.junit.Test
+
 /**
  * Point：函数的使用
  */
-object Function {
+@Test
+class Function {
 	def main(args: Array[String]): Unit = {
 		func01(5)
 		println(func02(5))
@@ -33,6 +36,7 @@ object Function {
 	 * 只有第一次使用的时候它才会加载，初始化被延迟
 	 * 这种语法对于开销较大的初始化语句非常有用
 	 */
+	@Test
 	def func05():Unit={
 		lazy val words = scala.io.Source.fromFile("./words.txt").mkString.split(" ")
 		for(word <- words) print(word+" ")
@@ -41,8 +45,9 @@ object Function {
 	/**
 	 * 字符串格式化函数
 	 */
+	@Test
 	def func04():Unit={
-		var str=MessageFormat.format("The answer is {0} is {1}", "everything",42.asInstanceOf[AnyRef])
+		val str=MessageFormat.format("The answer is {0} is {1}", "everything",42.asInstanceOf[AnyRef])
 		println(str)
 	}
 
